@@ -9,8 +9,7 @@ package cse360assign2;
  * performed.
  */
 public class Calculator {
-	private int total;	// The total from the operations performed
-
+private int total;	// The total from the operations performed
 	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
@@ -20,35 +19,40 @@ public class Calculator {
 	 * The "getTotal" method returns the value of the total variable.
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/*
 	 * The "add" method adds the inputed value to the total variable. 
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/*
 	 * The "subtract" method subtracts the inputed value from the total variable.
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/*
 	 * The "multiply" method multiplies the inputed value by the total variable.
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/*
 	 * The "divide" method divides the total variable by the inputed value.
 	 */
 	public void divide (int value) {
-		
+		if (value == 0) {
+			total = 0;
+		}
+		else {
+			total = total / value;
+		}
 	}
 	
 	/*
